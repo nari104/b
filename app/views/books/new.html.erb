@@ -1,3 +1,7 @@
+<div>
+    <%= flash[:notice] %>
+</div>
+
 <h2>New book</h2>
 <% if @book.errors.any? %>
     <%= @book.errors.count %>件のエラーが発生しました
