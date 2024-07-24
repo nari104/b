@@ -1,3 +1,54 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <style type="text/css">
+      .turbolinks-progress-bar {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: #0076ff;
+        z-index: 9999;
+        transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+        transform: translate3d(0,0,0);
+      }
+    </style>
+    <link rel="stylesheets" media="all" href="/assets/application.css" data-turbolinks-track="reload">
+    <script src="/assets/application.css" data-turbolinks-track="reload"></script>
+    <title>Bookers1new</title>
+  </head>
+
+  <body>
+    <p id="notice"></p>
+    <h1>Books</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>New book</h2>
+    <form class="new_book" id="new_book" action="/books" accept=charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" vallue="✓">
+      <input type="hidden" name="authenticity_token" value="">
+
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
 <h1>Books</h1>
 
 <% @books.each do |book| %>
