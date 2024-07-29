@@ -1,12 +1,24 @@
-<div>
-    <%= flash[:notice] %>
-</div>
+<!DOCTYPE html>
 
-<h2>タイトル</h2>
-<p><%= @book.title %></p>
+<html>
+    <div>
+        <%= flash[:notice] %>
+    </div>
 
-<h2>本文</h2>
-<p><%= @book.body %></p>
-
-<%= link_to "編集", edit_book_path(@book.id) %>
-<%= link_to "削除", book_path(@book.id), method: :delete, "date-confirm" => "本当に削除しますか？" %>
+    <body>
+        <p id="notice"></p>
+        <p>
+            <strong>Title:</strong>
+            <%= @book.title %>
+        </p>
+        <p>
+            <strong>Body:</strong>
+            <%= @book.body %>
+        </p>
+        <div>
+            <span class="link"><%= link_to "Edit", edit_book_path(@book.id) %></span>
+            |
+            <span><%= link_to "Back", books_path %></span>
+        </div>
+    </body>
+</html>
